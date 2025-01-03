@@ -13,6 +13,11 @@ body {
     font-size: 2em;
 }
 
+#date {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
