@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
         dateElement.textContent = date.toLocaleDateString('fr-FR', options);
     }
 
+    // Changer la couleur toutes les 5 secondes
+    setInterval(changerCouleur, 5000);
+
     // Changer la couleur au clic sur le bouton
     changerCouleurButton.addEventListener('click', changerCouleur);
 
