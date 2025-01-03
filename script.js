@@ -19,7 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function afficherDate() {
         const date = new Date();
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const jour = date.getDate();
+
         dateElement.textContent = date.toLocaleDateString('fr-FR', options);
+
+        if (jour % 2 !== 0) {
+            dateElement.classList.add('date-impair');
+        } else {
+            dateElement.classList.remove('date-impair');
+        }
     }
 
     // Changer la couleur toutes les 5 secondes
