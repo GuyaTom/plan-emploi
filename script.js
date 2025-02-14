@@ -19,6 +19,7 @@ function verifierVoyants() {
 
     if (jourSemaine === 6) {  // 6 correspond à samedi
         document.getElementById('voyant3').style.backgroundColor = 'red';
+        document.getElementById('voyant4').style.backgroundColor = 'red';
     }
 }
 
