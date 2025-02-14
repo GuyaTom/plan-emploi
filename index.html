@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan d'emploi</title>
+    <title>Tableau de bord</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="titre">Plan d'emploi</h1>
-    <p id="date"></p>
-    <button id="changerCouleurButton">Changer Couleur</button>
-
+    <div class="container">
+        <div class="date" id="date"></div>
+        <div class="voyant">
+            <div id="voyant1"></div>
+            <span>Plan d'emploi envoyé</span>
+            <button class="ok-button" onclick="changerCouleur('voyant1')">OK</button>
+        </div>
+        <div class="voyant">
+            <div id="voyant2"></div>
+            <span>Plan d'emploi appliqué</span>
+            <button class="ok-button" onclick="changerCouleur('voyant2')">OK</button>
+        </div>
+        <div class="voyant">
+            <div id="voyant3"></div>
+            <span>Heures de vol</span>
+            <button class="ok-button" onclick="changerCouleur('voyant3')">OK</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
