@@ -10,21 +10,33 @@ function verifierVoyants() {
     const jourSemaine = date.getDay();
 
     if (jour >= 25) {
-        document.getElementById('voyant1').style.backgroundColor = 'red';
+        localStorage.setItem('voyant1', 'red');
     }
 
     if (jour === 7) {
-        document.getElementById('voyant2').style.backgroundColor = 'red';
+        localStorage.setItem('voyant2', 'red');
     }
 
     if (jourSemaine === 6) {  // 6 correspond à samedi
-        document.getElementById('voyant3').style.backgroundColor = 'red';
-        document.getElementById('voyant4').style.backgroundColor = 'red';
+        localStorage.setItem('voyant3', 'red');
+        localStorage.setItem('voyant4', 'red');
     }
+
+    chargerEtatVoyants();
 }
 
 function changerCouleur(voyantId) {
+    localStorage.setItem(voyantId, 'green');
     document.getElementById(voyantId).style.backgroundColor = 'green';
+}
+
+function chargerEtatVoyants() {
+    document.querySelectorAll('.voyant-bulle').forEach(voyant => {
+        const couleur = localStorage.getItem(voyant.id);
+        if (couleur) {
+            voyant.style.backgroundColor = couleur;
+        }
+    });
 }
 
 afficherDate();
